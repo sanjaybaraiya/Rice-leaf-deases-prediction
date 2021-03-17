@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice Leaf Diseases Detection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/dropzone.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/app.css') }}">
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark justify-content-center">
+        <a class="navbar-brand" href="#">Rice Leaf Diseases Detection</a>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+        <div class="col card-wrapper" >
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="{{ url_for('static', filename='images/bacterial.jpg') }}" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Bacterial leaf Blight</h4>
+
+                    </div>
+                </div>
+            </div>            
+            <div class="col card-wrapper" >
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="{{ url_for('static', filename='images/brown.jpg') }}" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Brown Spot</h4>
+
+                        </div>
+                    </div>
+            </div>            
+            <div class="col card-wrapper">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="{{ url_for('static', filename='images/leaf.jpg') }}" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Leaf Smut</h4>
+
+                        </div>
+                    </div>
+            </div>          
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <form id="upload-file" method="post" enctype="multipart/form-data">
+                            <label for="imageUpload" class="upload-label">
+                            Choose...
+                             </label>
+                          <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                        </form>
+
+                        <h3 id="result">
+                             <span> </span>
+                        </h3>
+                    </div>
+                    <div class="image-section" style="display:none;">
+                       <div class="img-preview">
+                          <div id="imagePreview">
+                          </div>
+                        </div>
+                            <div class="row mt-3">
+                            <div class="col-3 mx-auto">
+                            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+                            </div>
+                          </div>
+                     </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+</body>
+
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='js/dropzone.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+
+
+</html>
